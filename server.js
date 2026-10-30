@@ -46,10 +46,12 @@ app.post("/data", async (req, res) => {
         }
 
         // Convert to number and round to nearest 0.5
-        let concentration = Math.max(
-            0,
-            Math.round(Number(conc) * 2) / 2
-        );
+        let x = Number(conc);
+
+let concentration = Math.max(
+    0,
+    Math.round(((0.00718116 * x) - 25.16279) * 2) / 2 + 0.5
+);
 
         console.log("Received concentration:", concentration);
 

@@ -47,7 +47,7 @@ app.post("/data", async (req, res) => {
 
         // Insert numeric value into PostgreSQL
         const result = await pool.query(
-            `INSERT INTO gas_readings_2 (concentration)
+            `INSERT INTO gas_readings_3 (concentration)
              VALUES ($1)
              RETURNING *`,
             [concentration]

@@ -50,7 +50,7 @@ app.post("/data", async (req, res) => {
 
 let concentration = Math.max(
     0,
-    Math.round(((0.00718116 * x) - 25.16279) * 2) / 2 + 0.5
+    Math.round(((0.00718116 * x) - 25.16279) * 2) / 2
 );
 
         console.log("Received concentration:", concentration);
